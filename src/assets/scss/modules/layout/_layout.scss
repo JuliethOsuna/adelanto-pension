@@ -1,0 +1,31 @@
+.mainLayout {
+  background-color: $layout__background-color;
+  height: 100vh;
+
+  &__header {
+    background-image: url(/assets/img/logo.PNG);
+    background-position: center;
+    background-size: cover;
+    height: 60px;
+  }
+
+  &__buttonBack {
+    display: flex;
+    align-items: center;
+    background: none;
+    outline: none;
+    border: none;
+    margin: 20px;
+    font-size: $font__size-15;
+    color: $black-44;
+
+    img {
+      width: $width_24;
+      margin-right: 5px;
+    }
+  }
+
+  &__viewContainer {
+    padding: 0 10px;
+  }
+}
