@@ -1,21 +1,21 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { BenefitsComponent } from './components/benefits/benefits.component';
 import { UserDataFormComponent } from './components/user-data-form/user-data-form.component';
-import { SelectCoverageComponent } from './components/select-coverage/select-coverage.component';
 import { ResultComponent } from './components/result/result.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   {
     path: '',
-    redirectTo: '/userDataForm',
+    redirectTo: '/benefits',
     pathMatch: 'full' },
+  {
+    path: 'benefits',
+    component: BenefitsComponent
+  },
   {
     path: 'userDataForm',
     component: UserDataFormComponent
-  },
-  {
-    path: 'selectCoverage',
-    component: SelectCoverageComponent
   },
   {
     path: 'result',

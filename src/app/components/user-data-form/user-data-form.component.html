@@ -1,1 +1,71 @@
-<p>user-data-form works!</p>
+<div class="contentBox">
+  <p class="bold font__size-14">Indique los siguientes datos para continuar con la solicitud de su adelanto de pensión:</p>
+  <form [formGroup]="userDataForm">
+    <div class="formgroup">
+      <label class="formgroup__label" for="ingresos">¿Cuál es el valor total de sus ingresos mensuales?</label>
+      <input class="formgroup__input" formControlName="ingresosMensuales" id="ingresos">
+    </div>
+    <div class="formgroup">
+      <label class="formgroup__label" for="actividadLaboral">¿Cuál es su actividad laboral actual?</label>
+      <select class="formgroup__select" formControlName="actividadLaboral" id="actividadLaboral">
+        <option value="volvo">Seleccione una opción</option>
+        <option value="volvo">Empleado</option>
+        <option value="saab">Independiente</option>
+        <option value="mercedes">Desempleado</option>
+      </select>
+    </div>
+    <div class="formgroup">
+      <label class="formgroup__label" for="empresa">¿Cuál es el nombre de su empresa?</label>
+      <input class="formgroup__input" formControlName="nombreEmpresa" id="empresa">
+    </div>
+    <div class="formgroup">
+      <label class="formgroup__label" for="contrato">¿Qué tipo de contrato tiene?</label>
+      <select class="formgroup__select" formControlName="tipoContrato" id="contrato">
+        <option value="">Seleccione una opción</option>
+        <option value="Indefinido">Indefinido</option>
+      </select>
+    </div>
+    <div class="formgroup">
+      <label class="formgroup__label" for="residencia">¿Cuál es su ciudad de residencia?</label>
+      <input class="formgroup__input" formControlName="ciudadResidencia" id="residencia">
+    </div>
+    <div *ngIf="!showEditAdress" class="formgroup">
+      <label class="formgroup__label" for="direccionResidencia">¿Cuál es su dirección de residencia?</label>
+      <a
+      (click)="editField()"
+      class="innerButton"
+      >
+        <img src="assets/img/icons/icon-Edit.svg"/>
+      </a>
+      <input class="formgroup__input" formControlName="direccionResidencia" id="direccionResidencia">
+    </div>
+    <div *ngIf="showEditAdress" class="formgroup">
+      <label class="formgroup__label" for="residencia">¿Cuál es su dirección de residencia?</label>
+      <div class="edit-adress">
+        <select class="formgroup__select edit-adress--select" id="residencia">
+          <option value=""></option>
+        </select>
+        <input class="formgroup__input edit-adress--input" id="residencia">
+         <span class="separator">#</span>
+        <input class="formgroup__input edit-adress--input" id="residencia">
+        <span class="separator">-</span>
+        <input class="formgroup__input edit-adress--input" id="residencia">
+      </div>
+      <label class="formgroup__label" for="residencia">Torre / Piso /Apartamento / Otro:</label>
+      <input class="formgroup__input" id="residencia">
+    </div>
+    <p class="font__size-13">Si está recibiendo ayuda de un <b>asesor del Banco</b>, ingrese el código del asesor:</p>
+    <div class="formgroup">
+      <a
+      class="innerButton tooltip-trigger"
+      >
+        <div class="tooltip-container">
+          Si le prestaron asesoría, ingrese el código del asesor comercial que lo está ayudando con esta solicitud; de lo contrario, no diligencie este espacio.
+        </div>
+        <img src="assets/img/icons/icon-question.svg"/>
+      </a>
+      <input class="formgroup__input" formControlName="codigoAsesor" id="asesor">
+    </div>
+  </form>
+</div>
+

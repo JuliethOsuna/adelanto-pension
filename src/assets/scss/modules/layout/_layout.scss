@@ -1,6 +1,6 @@
 .mainLayout {
   background-color: $layout__background-color;
-  height: 100vh;
+  min-height: 100vh;
 
   &__header {
     background-image: url(/assets/img/logo.PNG);
@@ -27,5 +27,22 @@
 
   &__viewContainer {
     padding: 0 10px;
+  }
+
+  .buttonContainer {
+    width: 100%;
+    text-align: center;
+    margin: 15px 0;
+  }
+
+  &__buttonContinue {
+    min-width: 130px;
+    padding: 8px;
+    color: $white-ff;
+    background-color: $button-continue__background-color;
+    outline: none;
+    border: none;
+    border-radius: 7px;
+    font-size: $font__size-18;
   }
 }

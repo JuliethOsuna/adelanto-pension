@@ -1,0 +1,49 @@
+.benefits-list {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin: 0 10px;
+  }
+
+  li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 27px;
+    font-size: $font__size-14;
+
+    span {
+      padding-left: 10px;
+      color: $black-56;
+    }
+  }
+
+  &__footer {
+    text-align: center;
+    font-size: $font__size-13;
+    color: $black-56;
+  }
+}
+
+.card-list {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: flex;
+    flex-direction: column;
+    background-color: $gray-EE;
+    padding: 13px 15px;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-size: $font__size-14;
+    color: $black-57;
+  }
+
+  &__label {
+    font-weight: 700;
+  }
+}

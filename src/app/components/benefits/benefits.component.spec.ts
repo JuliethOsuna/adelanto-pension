@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SelectCoverageComponent } from './select-coverage.component';
+import { BenefitsComponent } from './benefits.component';
 
-describe('SelectCoverageComponent', () => {
-  let component: SelectCoverageComponent;
-  let fixture: ComponentFixture<SelectCoverageComponent>;
+describe('BenefitsComponent', () => {
+  let component: BenefitsComponent;
+  let fixture: ComponentFixture<BenefitsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SelectCoverageComponent ]
+      declarations: [ BenefitsComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SelectCoverageComponent);
+    fixture = TestBed.createComponent(BenefitsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

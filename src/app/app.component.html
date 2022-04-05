@@ -1,10 +1,15 @@
 <div class="mainLayout">
   <header class="mainLayout__header"></header>
-  <button class="mainLayout__buttonBack">
+  <button (click)="backStep()" class="mainLayout__buttonBack">
     <img src="assets/img/button-back.png" alt="back">
     Atrás
   </button>
   <div class="mainLayout__viewContainer">
     <router-outlet></router-outlet>
+  </div>
+  <div class="buttonContainer">
+    <button (click)="nextStep()" class="mainLayout__buttonContinue">
+      {{buttonText}}
+    </button>
   </div>
 </div>
