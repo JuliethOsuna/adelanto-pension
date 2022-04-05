@@ -1,1 +1,22 @@
-<p>result works!</p>
+<div class="contentBox">
+  <div class="contentBox__title">
+    Adelanto de pensión y seguro
+  </div>
+  <section class="contentBox__message">
+    <div class="contentBox__message--title">
+      <img src="assets/img/icons/result.svg" alt="result">
+      <span>Los productos fueron aprobados satisfactoriamente.</span>
+    </div>
+    <p class="contentBox__message--description">
+      En un un plazo máximo de <b>5 días calendario</b>, se le informará por medio de un mensaje de texto el estado de sus productos.
+    </p>
+  </section>
+  <section class="card-list">
+    <ul>
+      <li *ngFor="let result of resultList">
+        <span class="card-list__label">{{result.label}}</span>
+        <span>{{result.text}}</span>
+      </li>
+    </ul>
+  </section>
+</div>

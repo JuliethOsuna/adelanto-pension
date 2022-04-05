@@ -1,0 +1,90 @@
+.formgroup {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+
+  &__label {
+    font-size: $font__size-13;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: $black-56;
+  }
+
+  &__input {
+    background-color: $white-ff;
+    border-radius: 5px;
+    border: 1px solid $gray-70;
+    padding: 10px;
+    outline: none;
+  }
+
+  &__select {
+    background-color: $white-ff;
+    border-radius: 5px;
+    border: 1px solid $gray-70;
+    padding: 10px;
+    outline: none;
+    font-size: $font__size-14;
+    color: $black-56;
+  }
+
+  .innerButton {
+		position: absolute;
+		bottom: 10px;
+		right: 10px;
+		width: 20px;
+		height: 20px;
+		z-index: 10;
+    padding-top: 2px;
+		margin: 0;
+		text-decoration: none !important;
+    cursor: pointer;
+		img
+		{
+			width: 100%;
+		}
+	}
+
+}
+
+.edit-adress {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+
+  &--select {
+    flex-grow: 0;
+    min-width: 80px;
+    margin-right: 10px;
+  }
+
+  &--input {
+    flex-grow: 1;
+    min-width: 40px;
+  }
+
+  .separator {
+    padding: 0 5px;
+  }
+}
+
+.tooltip-trigger:hover {
+  .tooltip-container {
+    display: block;
+  }
+}
+
+.tooltip-container {
+  position: absolute;
+  display: none;
+  background-color: $gray-CC;
+  padding: 15px;
+  bottom: 12px;
+  right: 20px;
+  border-radius: 7px;
+  min-width: 280px;
+  color: $black-00;
+  font-weight: 500;
+}
+
